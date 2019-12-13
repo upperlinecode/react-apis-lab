@@ -1,10 +1,32 @@
-# React Blank Template
+# Lab: Displaying NYC Open Data
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app), and then modified to create stateful functional components as explained by this [blog post](https://medium.com/@baronmaximilianwilleford/react-without-this-39a76b8f2160) as a way to create a more unified syntax between functional components and class components for first-time learners of React.
+![A picture of what it'll look like](./finished.png)
 
-To run this application, clone it down into your workspace, and then run the following two commands:
+## The Goal
 
-```bash
-npm install
-npm start
-```
+In this lab, you'll build an interface to display NYC Open Data.
+
+## The Setup
+
+1. Clone this repository using `git clone`
+2. `cd` into the project folder
+3. `npm install`
+4. `npm start`
+
+## The Lab
+
+### Part Zero: Sign up for a Socrata API Token
+
+1. Follow the instructions in the "Getting an App Token" section of the "NYC Open Data" lesson.
+
+### Part One: 🐿
+
+1. Use the [NYC Open Data Portal](https://opendata.cityofnewyork.us/) to locate the "2018 Central Park Squirrel Census - Squirrel Data" dataset.
+2. Consult the API Documentation, and open the API endpoint (the URL ending in `.json`) in a new tab.
+3. Append your App Token to the end of the URL.
+4. Filter the data to only those squirrels who were viewed while running: `running=true`.
+
+### Part Two: 🐿 in React
+
+1. More soon.
+
