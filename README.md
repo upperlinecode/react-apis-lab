@@ -31,7 +31,7 @@ In this lab, you'll build an interface to display NYC Open Data.
 1. Update the functional component `App` in `App.js` to include a `componentDidMount` lifecycle method.
 2. Use `fetch()` to get the data from Part One, Step 4. `console.log()` the result.
 > Hint: you may need to use an initial `.then()` step to convert the response to JSON.
-3. Store the rest of the API call in a state variable called `squirrels`.
+3. Store the result of the API call in a state variable called `squirrels`.
 4. Use `.map()` to render a list of all observed squirrels showing the `unique_squirrel_id` of each.
 5. Create a new component called `<Squirrel />` and pass its data to it as a prop.
 > Note: there's a `.Squirrel` CSS class which may be helpful.
