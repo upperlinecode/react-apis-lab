@@ -1,6 +1,6 @@
 # Lab: Displaying NYC Open Data
 
-![A picture of what it'll look like](./finished.png)
+![Squirrel Data](squirrels.png)
 
 ## The Goal
 
@@ -23,10 +23,33 @@ In this lab, you'll build an interface to display NYC Open Data.
 
 1. Use the [NYC Open Data Portal](https://opendata.cityofnewyork.us/) to locate the "2018 Central Park Squirrel Census - Squirrel Data" dataset.
 2. Consult the API Documentation, and open the API endpoint (the URL ending in `.json`) in a new tab.
-3. Append your App Token to the end of the URL.
+3. Create a new Socrata App Token and append it to the end of the URL.
 4. Filter the data to only those squirrels who were viewed while running: `running=true`.
 
 ### Part Two: 🐿 in React
 
-1. More soon.
+1. Update the functional component `App` in `App.js` to include a `componentDidMount` lifecycle method.
+2. Use `fetch()` to get the data from Part One, Step 4. `console.log()` the result.
+> Hint: you may need to use an initial `.then()` step to convert the response to JSON.
+3. Store the rest of the API call in a state variable called `squirrels`.
+4. Use `.map()` to render a list of all observed squirrels showing the `unique_squirrel_id` of each.
+5. Create a new component called `<Squirrel />` and pass its data to it as a prop.
+> Note: there's a `.Squirrel` CSS class which may be helpful.
 
+### Part Three: 🌰+🐿 in React
+
+1. Add a note below the `<h1>` indicating how many observations are in the dataset.
+2. Add an indicator, e.g. a 🍼, to any data block representing a "Juvenile" squirrel.
+2. Add an indication of the fur color to each data block. (e.g. as a circle, square, or background color)
+   1. Notice that there are several fields related to squirrel color. Choose the one(s) you think will work best.
+3. Show an indicator of at least 4 of the following properties in each data block:
+   - "running", "chasing", "climbing", "eating", "foraging", "kuks", "quaas", "moans", "tail_flags", "tail_twitches", "approaches", "indifferent", "runs_from"
+   - Only show an indicator if the value of the property is `true`.
+4. Display the date of each observation on the data block.
+   - Try to reformat the string to show the date as "Wed. Oct. 10, 2018".
+
+### Part Four: 🌳🐿🌳 in React (Stretch)
+
+1. Display the data blocks in order from oldest to newest.
+2. Add a button at the top of the app that sorts the data by `primary_fur_color` or another data property.
+3. Use the `x` and `y` values to display a map of the location where the squirrel was spotted.
