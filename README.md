@@ -24,15 +24,20 @@ In this lab, you'll build an interface to display NYC Open Data.
 1. Use the [NYC Open Data Portal](https://opendata.cityofnewyork.us/) to locate the "2018 Central Park Squirrel Census - Squirrel Data" dataset.
 2. Consult the API Documentation, and open the API endpoint (the URL ending in `.json`) in a new tab.
 3. Create a new Socrata App Token and append it to the end of the URL.
+> Refer back to the ["Getting an App Token" section of the NYC Open Data lesson](https://github.com/upperlinecode/CS-and-the-City-Curriculum/blob/master/react/react-nyc-open-data.md#getting-an-app-token) if you need help with this.
 4. Filter the data to only those squirrels who were viewed while running: `running=true`.
+> Refer back to the ["Filtering Data from Socrata" section of the NYC Open Data lesson](https://github.com/upperlinecode/CS-and-the-City-Curriculum/blob/master/react/react-nyc-open-data.md#filtering-data-from-socrata) if you need help with this.
 
 ### Part Two: 🐿 in React
+
+> Refer back to the ["Getting NYC Open Data into React" section of the NYC Open Data lesson](https://github.com/upperlinecode/CS-and-the-City-Curriculum/blob/master/react/react-nyc-open-data.md#getting-nyc-open-data-into-react) if you need help with this.
 
 1. Update the functional component `App` in `App.js` to include a `componentDidMount` lifecycle method.
 2. Use `fetch()` to get the data from Part One, Step 4. `console.log()` the result.
 > Hint: you may need to use an initial `.then()` step to convert the response to JSON.
 3. Store the result of the API call in a state variable called `squirrels`.
 4. Use `.map()` to render a list of all observed squirrels showing the `unique_squirrel_id` of each.
+> Tip: When you `npm run`, your list should have about 700 entries in it. What happens if you remove `running=true` from your API request?
 5. Create a new component called `<Squirrel />` and pass its data to it as a prop.
 > Note: there's a `.Squirrel` CSS class which may be helpful.
 
