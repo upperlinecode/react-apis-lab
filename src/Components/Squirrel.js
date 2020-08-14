@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Squirrel = (props) => {
+function Squirrel(props) {
   // determine if squirrel is a juvenile
   let juvenile = (props.data.age == "Juvenile") ? ' 🍼' : '';
   
@@ -15,13 +15,13 @@ const Squirrel = (props) => {
   actions += (props.data.climbing) ? 'climbing ' : '';
   actions += (props.data.eating) ? 'eating ' : '';
   actions += (props.data.foraging) ? 'foraging ' : '';
-  actions = actions.trim().replace(/ /g,", ")
+  actions = actions.trim().replace(/ /g,", ");
   
   // format the date
   let date = props.data.date;
-  let formattedDate = new Date(Date.UTC(date.substring(4,8), date.substring(0,2)-1, date.substring(2,4), 12, 0, 0))
+  let formattedDate = new Date(Date.UTC(date.substring(4,8), date.substring(0,2)-1, date.substring(2,4), 12, 0, 0));
   let options = {weekday: 'short', month: 'short', day: 'numeric', year: 'numeric'};
-  let newDate = formattedDate.toLocaleString('en-US', options)
+  let newDate = formattedDate.toLocaleString('en-US', options);
   
   return (
     <div className="Squirrel">
@@ -30,7 +30,7 @@ const Squirrel = (props) => {
       <div className={colorClassName}></div>
       <p className="Actions">{actions}</p>
     </div>
-  )
+  );
 }
 
 export default Squirrel;
