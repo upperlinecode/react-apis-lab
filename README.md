@@ -17,7 +17,7 @@ In this lab, you'll build an interface to display NYC Open Data.
 
 ### Part Zero: Sign up for a Socrata API Token
 
-1. Follow the instructions in the "Getting an App Token" section of the ["NYC Open Data" lesson](https://github.com/upperlinecode/react-apis-lab.git).
+1. Follow the instructions in the "Getting an App Token" section of the ["NYC Open Data" lesson](https://github.com/upperlinecode/CS-and-the-City-Curriculum/blob/master/react/react-nyc-open-data.md#getting-an-app-token).
 
 ### Part One: 🐿
 
